@@ -21,6 +21,12 @@ class ProdutoResource extends JsonResource
             'valor' => $this->valor,
             'categoria' => $this->categoria,
             'img_url' => asset('storage/'.$this->img_url),
+            'porte' => $this->porte,
+            'idade' => $this->idade,
+            'racas' => $this->racas,
+            'quantidade' => $this->quantidade,
+            'sabor' => $this->sabor,
+            'marca' => $this->marca,
         ];
     }
 }

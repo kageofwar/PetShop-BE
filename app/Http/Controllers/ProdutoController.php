@@ -23,6 +23,14 @@ class ProdutoController extends Controller
         $produtos->valor = $request->valor;
         $produtos->categoria = $request->categoria;
         $produtos->img_url = $imagePath;
+        $produtos->porte = $request->porte;
+        $produtos->idade = $request->idade;
+        $produtos->racas = $request->racas;
+        $produtos->quantidade = $request->quantidade;
+        $produtos->sabor = $request->sabor;
+        $produtos->marca = $request->marca;
+        $produtos->descricao = $request->descricao;
+        $produtos->ingredientes = $request->ingredientes;
 
         $produtos->save();
     }

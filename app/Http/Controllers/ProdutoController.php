@@ -40,4 +40,27 @@ class ProdutoController extends Controller
 
         return new ProdutoResource($produto);
     }
+
+    public function edit(Request $request, $id){
+        $produto = Produto::findOrFail($id);
+
+        $imagePath = $request->file('img_url')->store('images', 'public');
+
+        $produto->titulo = $request->titulo; 
+        $produto->valor = $request->valor;
+        $produto->categoria = $request->categoria;
+        $produto->img_url = $imagePath;
+        $produto->porte = $request->porte;
+        $produto->idade = $request->idade;
+        $produto->racas = $request->racas;
+        $produto->quantidade = $request->quantidade;
+        $produto->sabor = $request->sabor;
+        $produto->marca = $request->marca;
+        $produto->descricao = $request->descricao;
+        $produto->ingredientes = $request->ingredientes;
+
+        $produto->update();
+
+        return new ProdutoResource($produto);
+    }
 }

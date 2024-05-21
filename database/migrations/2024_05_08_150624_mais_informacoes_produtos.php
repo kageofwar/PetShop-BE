@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('sabor')->nullable()->after('categoria');
             $table->string('marca')->nullable()->after('categoria');
 
-            $table->string('descricao')->nullable()->after('categoria');
-            $table->string('ingredientes')->nullable()->after('categoria');
+            $table->text('descricao')->nullable()->after('categoria');
+            $table->text('ingredientes')->nullable()->after('categoria');
         });
     }
 

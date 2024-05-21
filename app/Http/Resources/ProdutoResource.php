@@ -27,6 +27,8 @@ class ProdutoResource extends JsonResource
             'quantidade' => $this->quantidade,
             'sabor' => $this->sabor,
             'marca' => $this->marca,
+            'descricao' => $this->descricao,
+            'ingredientes' => $this->ingredientes
         ];
     }
 }
